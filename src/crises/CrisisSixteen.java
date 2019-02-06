@@ -1,5 +1,6 @@
 package crises;
 
+import aplicationCore.ClearScreen;
 import aplicationCore.Resources;
 import workers.Worker;
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ public class CrisisSixteen extends Crisis {
 
     @Override
     public void crisisResolution(ArrayList<Crisis> crises, ArrayList<Worker> workers, Resources resources) {
+        ClearScreen.clearConsoleScreen();
         System.out.println("Your slave prepared some sabotage. He stole some dynamite from the mine and rigged your resource " +
                 "\ndepot and your farm and mine machinery. You have time to stop only one explosion. What will you save?");
         System.out.println("1 - Resource Depot.");

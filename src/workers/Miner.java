@@ -28,7 +28,7 @@ public class Miner extends Worker {
         }
         double foodProd = Math.sqrt(18 - (minProd + Math.pow(brainPow, 2.1)));
         double pay = 0.3 * foodProd + 0.2 * minProd + 0.6 * brainPow;
-        double foodReq = 0.2 * foodProd + 0.5 * minProd + 0.6 * brainPow;
+        double foodReq = 0.25 * foodProd + 0.45 * minProd + 0.6 * brainPow;
         myMiner = new Miner("Miner", pay, foodReq, foodProd, minProd, brainPow, false);
         myMiner.introduceWorker();
         return myMiner;

@@ -1,5 +1,6 @@
 package crises;
 
+import aplicationCore.ClearScreen;
 import aplicationCore.Resources;
 import workers.Worker;
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ public class CrisisTen extends Crisis {
 
     @Override
     public void crisisResolution(ArrayList<Crisis> crises, ArrayList<Worker> workers, Resources resources) {
+        ClearScreen.clearConsoleScreen();
         System.out.println("Your banker have developed new method of work organization. He is eager to test it on a farm " +
                 "or on a mine. Choose one.");
         String farmOrMine = new Scanner(System.in).nextLine();

@@ -1,5 +1,6 @@
 package crises;
 
+import aplicationCore.ClearScreen;
 import aplicationCore.Resources;
 import workers.Worker;
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ public class CrisisFour extends Crisis {
 
     @Override
     public void crisisResolution(ArrayList<Crisis> crises, ArrayList<Worker> workers, Resources resources) {
+        ClearScreen.clearConsoleScreen();
 
             System.out.println("Your Farmer want's to educate himself to become a better professional. " +
                     "How much money will you spend on his education?");

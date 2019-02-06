@@ -1,5 +1,6 @@
 package crises;
 
+import aplicationCore.ClearScreen;
 import aplicationCore.Resources;
 import workers.Worker;
 
@@ -13,6 +14,7 @@ public class CrisisEleven extends Crisis {
 
     @Override
     public void crisisResolution(ArrayList<Crisis> crises, ArrayList<Worker> workers, Resources resources) {
+        ClearScreen.clearConsoleScreen();
         System.out.println("Great wages inflation is coming. Your banker will combat it but you can spend cash to make " +
                 "his struggle easier. You can spend 0 - 10 cash to make your chances better. How much would you like to spend?");
         double inflationMoney = new Scanner(System.in).nextDouble();

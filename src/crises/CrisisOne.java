@@ -1,6 +1,7 @@
 package crises;
 
 
+import aplicationCore.ClearScreen;
 import aplicationCore.Resources;
 import workers.Worker;
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ public class CrisisOne extends Crisis {
 
     @Override
     public void crisisResolution(ArrayList<Crisis> crises, ArrayList<Worker> workers, Resources resources) {
+        ClearScreen.clearConsoleScreen();
         do {
             System.out.println("Your farm has been flooded by heavy rainstorms. You need to send somebody strong to " +
                     "drain the land or loose all food production this turn. Who do you send?");

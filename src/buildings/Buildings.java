@@ -1,5 +1,6 @@
 package buildings;
 
+import aplicationCore.ClearScreen;
 import aplicationCore.Resources;
 import aplicationCore.Wonder;
 import workers.Worker;
@@ -47,6 +48,7 @@ public class Buildings {
 
     public static void buildBuilding(ArrayList<Buildings> buildings, Resources resources , Wonder wonder) {
         if (!isBuildingBuiltThisTurn) {
+            ClearScreen.clearConsoleScreen();
             System.out.println("Choose a building:");
             if (!buildings.get(0).isItBuilt) {
                 System.out.println("1 - Farmhouse (increases food production by 50%");
@@ -61,7 +63,7 @@ public class Buildings {
                 System.out.println("    cost: 8 minerals, upkeep: 2$ / turn");
             }
             if (!buildings.get(3).isItBuilt) {
-                System.out.println("4 - Wonder Crane (increases efficiency of wonder building by 50%");
+                System.out.println("4 - Spaceship Dry Dock (increases efficiency of spaceship repairs by 50%");
                 System.out.println("    cost: 5 minerals, upkeep: 1$ / turn");
             }
             if (!buildings.get(4).isItBuilt) {
@@ -92,6 +94,8 @@ public class Buildings {
                 System.out.println("10 - Marketplace (allows you to trade resources");
                 System.out.println("    cost: 5 minerals, upkeep: 1$ / turn");
             }
+            System.out.println("11 - Back to main menu");
+
             int usersChoice = new Scanner(System.in).nextInt();
             switch (usersChoice) {
                 case 1:
@@ -100,10 +104,13 @@ public class Buildings {
                         resources.setMineralResources(resources.getMineralResources() - 5);
                         buildings.get(0).setItBuilt(true);
                         isBuildingBuiltThisTurn = true;
+                        ClearScreen.clearConsoleScreen();
                         System.out.println("Building constructed.");
                     } else if (buildings.get(0).isItBuilt) {
+                        ClearScreen.clearConsoleScreen();
                         System.out.println("Farmhouse is already built.");
                     } else {
+                        ClearScreen.clearConsoleScreen();
                         System.out.println("Not enough minerals.");
                     }
                     break;
@@ -113,10 +120,13 @@ public class Buildings {
                         resources.setMineralResources(resources.getMineralResources() - 8);
                         buildings.get(1).setItBuilt(true);
                         isBuildingBuiltThisTurn = true;
+                        ClearScreen.clearConsoleScreen();
                         System.out.println("Building constructed.");
                     } else if (buildings.get(1).isItBuilt) {
+                        ClearScreen.clearConsoleScreen();
                         System.out.println("Deep Mine is already built.");
                     } else {
+                        ClearScreen.clearConsoleScreen();
                         System.out.println("Not enough resources.");
                     }
                     break;
@@ -126,10 +136,13 @@ public class Buildings {
                         resources.setMineralResources(resources.getMineralResources() - 8);
                         buildings.get(2).setItBuilt(true);
                         isBuildingBuiltThisTurn = true;
+                        ClearScreen.clearConsoleScreen();
                         System.out.println("Building constructed.");
                     } else if (buildings.get(2).isItBuilt) {
+                        ClearScreen.clearConsoleScreen();
                         System.out.println("Bank is already built.");
                     } else {
+                        ClearScreen.clearConsoleScreen();
                         System.out.println("Not enough resources.");
                     }
                     break;
@@ -139,10 +152,13 @@ public class Buildings {
                         resources.setMineralResources(resources.getMineralResources() - 5);
                         buildings.get(3).setItBuilt(true);
                         isBuildingBuiltThisTurn = true;
+                        ClearScreen.clearConsoleScreen();
                         System.out.println("Building constructed.");
                     } else if (buildings.get(3).isItBuilt) {
-                        System.out.println("Wonder Crane is already built.");
+                        ClearScreen.clearConsoleScreen();
+                        System.out.println("Spaceship Dry Dock is already built.");
                     } else {
+                        ClearScreen.clearConsoleScreen();
                         System.out.println("Not enough resources.");
                     }
                     break;
@@ -151,10 +167,13 @@ public class Buildings {
                         resources.setMineralResources(resources.getMineralResources() - 5);
                         buildings.get(4).setItBuilt(true);
                         isBuildingBuiltThisTurn = true;
+                        ClearScreen.clearConsoleScreen();
                         System.out.println("Building constructed.");
                     } else if (buildings.get(4).isItBuilt) {
+                        ClearScreen.clearConsoleScreen();
                         System.out.println("School is already built.");
                     } else {
+                        ClearScreen.clearConsoleScreen();
                         System.out.println("Not enough resources.");
                     }
                     break;
@@ -163,10 +182,13 @@ public class Buildings {
                         resources.setMineralResources(resources.getMineralResources() - 5);
                         buildings.get(5).setItBuilt(true);
                         isBuildingBuiltThisTurn = true;
+                        ClearScreen.clearConsoleScreen();
                         System.out.println("Building constructed.");
                     } else if (buildings.get(5).isItBuilt) {
+                        ClearScreen.clearConsoleScreen();
                         System.out.println("Alien Resources Replicator is already built.");
                     } else {
+                        ClearScreen.clearConsoleScreen();
                         System.out.println("Not enough resources.");
                     }
                     break;
@@ -175,10 +197,13 @@ public class Buildings {
                         resources.setMineralResources(resources.getMineralResources() - 8);
                         buildings.get(6).setItBuilt(true);
                         isBuildingBuiltThisTurn = true;
+                        ClearScreen.clearConsoleScreen();
                         System.out.println("Building constructed.");
                     } else if (buildings.get(6).isItBuilt) {
+                        ClearScreen.clearConsoleScreen();
                         System.out.println("Alien borehole is already built.");
                     } else {
+                        ClearScreen.clearConsoleScreen();
                         System.out.println("Not enough resources.");
                     }
                     break;
@@ -187,10 +212,13 @@ public class Buildings {
                         resources.setMineralResources(resources.getMineralResources() - 8);
                         buildings.get(7).setItBuilt(true);
                         isBuildingBuiltThisTurn = true;
+                        ClearScreen.clearConsoleScreen();
                         System.out.println("Building constructed.");
                     } else if (buildings.get(7).isItBuilt) {
+                        ClearScreen.clearConsoleScreen();
                         System.out.println("Alien Automated Donkey Farm is already built.");
                     } else {
+                        ClearScreen.clearConsoleScreen();
                         System.out.println("Not enough resources.");
                     }
                     break;
@@ -199,10 +227,13 @@ public class Buildings {
                         resources.setMineralResources(resources.getMineralResources() - 8);
                         buildings.get(8).setItBuilt(true);
                         isBuildingBuiltThisTurn = true;
+                        ClearScreen.clearConsoleScreen();
                         System.out.println("Building constructed.");
                     } else if (buildings.get(8).isItBuilt) {
+                        ClearScreen.clearConsoleScreen();
                         System.out.println("Alien Automated Money Printer is already built.");
                     } else {
+                        ClearScreen.clearConsoleScreen();
                         System.out.println("Not enough resources.");
                     }
                     break;
@@ -211,18 +242,26 @@ public class Buildings {
                         resources.setMineralResources(resources.getMineralResources() - 5);
                         buildings.get(9).setItBuilt(true);
                         isBuildingBuiltThisTurn = true;
+                        ClearScreen.clearConsoleScreen();
                         System.out.println("Building constructed.");
                     } else if (buildings.get(9).isItBuilt) {
+                        ClearScreen.clearConsoleScreen();
                         System.out.println("Marketplace is already built.");
                     } else {
+                        ClearScreen.clearConsoleScreen();
                         System.out.println("Not enough resources.");
                     }
                     break;
+                case 11:
+                    ClearScreen.clearConsoleScreen();
+                    break;
                 default:
+                    ClearScreen.clearConsoleScreen();
                     System.out.println("You cannot select that.");
                     break;
             }
         } else {
+            ClearScreen.clearConsoleScreen();
             System.out.println("You have already built a building this turn.");
         }
     }
@@ -239,7 +278,7 @@ public class Buildings {
             villageBuildings = villageBuildings + (" _BANK_ ");
         }
         if (buildings.get(3).isItBuilt) {
-            villageBuildings = villageBuildings + (" _WONDER CRANE_ ");
+            villageBuildings = villageBuildings + (" _SPACESHIP DRY DOCK_ ");
         }
         if (buildings.get(4).isItBuilt) {
             villageBuildings = villageBuildings + (" _SCHOOL_ ");
@@ -270,9 +309,9 @@ public class Buildings {
         }
         System.out.printf("Buildings upkeep: %.1f / turn\n", buildingUpkeep);
 
-        System.out.println("Farming efficiency = " + resources.getFarmingFactor() * 100 + " percent");
-        System.out.println("Mining efficiency = " + resources.getMineralFactor() * 100 + " percent");
-        System.out.println("Banking efficiency = " + resources.getMoneyFactor() * 100 + " percent");
+        System.out.printf("Farming efficiency = %.0f percent\n", resources.getFarmingFactor() * 100 );
+        System.out.printf("Mining efficiency = %.0f percent\n", resources.getMineralFactor() * 100);
+        System.out.printf("Banking efficiency = %.0f percent\n", resources.getMoneyFactor() * 100);
         double totalWages = 0;
         for (Worker worker : workers) {
             totalWages += worker.getPayRate();

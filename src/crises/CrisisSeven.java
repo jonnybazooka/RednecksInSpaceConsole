@@ -1,5 +1,6 @@
 package crises;
 
+import aplicationCore.ClearScreen;
 import aplicationCore.Resources;
 import workers.Worker;
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ public class CrisisSeven extends Crisis {
 
     @Override
     public void crisisResolution(ArrayList<Crisis> crises, ArrayList<Worker> workers, Resources resources) {
+        ClearScreen.clearConsoleScreen();
         System.out.println("Your miner has found an alien power drill. He cannot wait to use it in his mine.\nWill you " +
                 "let this idiot do this? Yes or No ");
         String acceptanceAlienDrill = new Scanner(System.in).nextLine();

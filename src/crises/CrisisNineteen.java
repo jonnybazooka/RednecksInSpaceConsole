@@ -1,5 +1,6 @@
 package crises;
 
+import aplicationCore.ClearScreen;
 import aplicationCore.Resources;
 import workers.Worker;
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ public class CrisisNineteen extends Crisis {
 
     @Override
     public void crisisResolution(ArrayList<Crisis> crises, ArrayList<Worker> workers, Resources resources) {
+        ClearScreen.clearConsoleScreen();
         System.out.println("A gypsy caravan arrived to your village. You have a rare opportunity to trade your resources.");
         boolean continueTrading = true;
         do {

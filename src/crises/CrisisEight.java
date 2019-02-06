@@ -1,5 +1,6 @@
 package crises;
 
+import aplicationCore.ClearScreen;
 import aplicationCore.Resources;
 import workers.Worker;
 
@@ -13,6 +14,7 @@ public class CrisisEight extends Crisis {
 
     @Override
     public void crisisResolution(ArrayList<Crisis> crises, ArrayList<Worker> workers, Resources resources) {
+        ClearScreen.clearConsoleScreen();
         System.out.println("Your miner has been attacked by venomous mountain snakes, and as a result he will suffer from " +
                 "a brain damage.\nSomebody will have to give him a medical attention. Choose who: ");
         String medicalAttender = new Scanner(System.in).nextLine();

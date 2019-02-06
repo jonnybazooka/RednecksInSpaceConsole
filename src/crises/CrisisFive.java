@@ -1,5 +1,6 @@
 package crises;
 
+import aplicationCore.ClearScreen;
 import aplicationCore.Resources;
 import workers.Worker;
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ public class CrisisFive extends Crisis {
 
     @Override
     public void crisisResolution(ArrayList<Crisis> crises, ArrayList<Worker> workers, Resources resources) {
+        ClearScreen.clearConsoleScreen();
         System.out.println("There is a problem in the mine. A lot of resources had been cut off by a cave-in. The only way to get to " +
                 "them is to plant a dynamite.\nYou have to choose who will plant the charges. The smarter the worker, the better the " +
                 "results will be.\nBut the worker won't be able to produce this turn. Pick a worker: ");

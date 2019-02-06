@@ -1,5 +1,6 @@
 package crises;
 
+import aplicationCore.ClearScreen;
 import aplicationCore.Resources;
 import workers.Worker;
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ public class CrisisSeventeen extends Crisis {
 
     @Override
     public void crisisResolution(ArrayList<Crisis> crises, ArrayList<Worker> workers, Resources resources) {
+        ClearScreen.clearConsoleScreen();
         System.out.println("Crazy cookie monster attacks your village. You must feed him. How much food will you give him?");
         System.out.println("Choose between 0 and " + resources.getFoodResources() + ".");
         double foodForMonster = new Scanner(System.in).nextDouble();

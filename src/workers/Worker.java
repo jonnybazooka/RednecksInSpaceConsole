@@ -81,6 +81,9 @@ public class Worker {
     }
 
     public void introduceWorker() {
+        if (exhaustionStatus) {
+            System.out.println("WARNING. " + job.toUpperCase() + " CANNOT WORK THIS TURN.");
+        }
         System.out.printf("I'm a " + "%s" + "\nFood production: " + "%.2f" + "\nMineral production: "
                         + "%.2f" + "\nBrain power: " + "%.2f" + "\nMy pay is: " + "%.2f"
                         + "\nI eat: " + "%.2f" + " food.\n\n", getJob(), getFoodProduction(), getMineralProduction(), getBrainPowerProduction(),

@@ -15,6 +15,8 @@ public class App {
 
     public static void main(String[] args) {
 
+        Introduction.introduction();
+
         ArrayList<Worker> workers = workersSetup();
         ArrayList<Buildings> buildings = buildingsSetup();
         ArrayList<Crisis> crises = crisesSetup();

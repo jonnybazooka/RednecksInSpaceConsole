@@ -14,9 +14,10 @@ class Menu {
 
     static void printMenu(ArrayList<Buildings> buildings, Wonder wonder, Resources resources, ArrayList<Worker> workers,
                           ArrayList<Crisis> crises) {
+        System.out.println();
         System.out.println("1 - Check workers abilities.");
         System.out.println("2 - Check resources.");
-        System.out.println("3 - Build wonder.");
+        System.out.println("3 - Repair spaceship.");
         if (!Buildings.isBuildingBuiltThisTurn) {
             System.out.println("4 - Build a building.");
         }
@@ -37,20 +38,24 @@ class Menu {
         MenuOptions command = MenuOptions.menuOptionByOrdinal((input-1));
         switch (command) {
             case CHECK_WORKERS_ABILITIES:
+                ClearScreen.clearConsoleScreen();
                 for (Worker worker : workers) {
                     worker.introduceWorker();
                 }
                 break;
             case CHECK_RESOURCES:
+                ClearScreen.clearConsoleScreen();
                 resources.showResources();
                 break;
-            case BUILD_WONDER:
+            case REPAIR_SPACESHIP:
+                ClearScreen.clearConsoleScreen();
                 wonder.constructWonder(resources);
                 break;
             case BUILD_A_BUILDING:
                 Buildings.buildBuilding(buildings, resources, wonder);
                 break;
             case RESOLVE_CRISIS:
+                ClearScreen.clearConsoleScreen();
                 if (!Crisis.isCrisisResolvedThisTurn) {
                     Crisis.crisisStatusCheck(crises);
                     int randomCrisisCounter = new Random().nextInt(20) + 1;
@@ -65,6 +70,7 @@ class Menu {
                     break;
                 }
             case PRODUCE_RESOURCES:
+                ClearScreen.clearConsoleScreen();
                 if (resources.isResourcesProducedThisTurn()) {
                     System.out.println("You have already produced this turn.");
                 }
@@ -76,6 +82,7 @@ class Menu {
                 }
                 break;
             case MARKETPLACE:
+                ClearScreen.clearConsoleScreen();
                 if (buildings.get(9).isItBuilt()) {
                     ((Marketplace) buildings.get(9)).marketplace(resources);
                 } else {
@@ -83,6 +90,7 @@ class Menu {
                 }
                 break;
             case END_TURN:
+                ClearScreen.clearConsoleScreen();
                 if (resources.isResourcesProducedThisTurn() && Crisis.isCrisisResolvedThisTurn) {
                     Worker.workerEndTurn(workers, resources);
                     resources.setResourcesProducedThisTurn(false);
@@ -114,7 +122,7 @@ class Menu {
                         ((MoneyPrinter) buildings.get(8)).moneyPrinterOperations(workers, resources);
                     }
                     wonder.checkVictoryCondition();
-                    resources.checkLoseConditions();
+                    resources.checkLoseConditions(wonder);
                     if (App.gameContinue) {
                         turnCounter++;
                         System.out.println("TURN " + turnCounter + " BEGINS.");
@@ -126,6 +134,7 @@ class Menu {
                 }
                 break;
             case VILLAGE_VIEW:
+                ClearScreen.clearConsoleScreen();
                 Buildings.villageView(buildings, resources, workers);
         }
     }

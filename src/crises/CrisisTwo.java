@@ -1,5 +1,6 @@
 package crises;
 
+import aplicationCore.ClearScreen;
 import aplicationCore.Resources;
 import workers.Worker;
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ public class CrisisTwo extends Crisis {
 
     @Override
     public void crisisResolution(ArrayList<Crisis> crises, ArrayList<Worker> workers, Resources resources) {
+        ClearScreen.clearConsoleScreen();
         do {
             System.out.println("Your crops has been attacked by a very ferocious breed of potato beetle. If your farmer is " +
                     "smart enough, he may be able to exterminate it, but he won't be able to work his farm this turn.\n Otherwise " +

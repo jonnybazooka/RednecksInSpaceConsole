@@ -1,5 +1,6 @@
 package crises;
 
+import aplicationCore.ClearScreen;
 import aplicationCore.Resources;
 import workers.Slave;
 import workers.Worker;
@@ -13,6 +14,7 @@ public class CrisisFifteen extends Crisis {
 
     @Override
     public void crisisResolution(ArrayList<Crisis> crises, ArrayList<Worker> workers, Resources resources) {
+        ClearScreen.clearConsoleScreen();
         System.out.println("Your slave have escaped. You must buy a new slave. Send one of your workers to the slave market. " +
                 "Who will go? ");
         String whoWillBuyASlave = new Scanner(System.in).nextLine();

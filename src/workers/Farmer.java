@@ -28,8 +28,8 @@ public class Farmer extends Worker{
             brainPow = 3.0;
         }
         double minProd = Math.sqrt(19 - (foodProd + Math.pow(brainPow, 2.2)));
-        double pay = 0.2 * foodProd + 0.4 * minProd + 0.6 * brainPow;
-        double foodReq = 0.1 * foodProd + 0.3 * minProd + 0.8 * brainPow;
+        double pay = 0.3 * foodProd + 0.3 * minProd + 0.6 * brainPow;
+        double foodReq = 0.2 * foodProd + 0.3 * minProd + 0.8 * brainPow;
         myFarmer = new Farmer("Farmer", pay, foodReq, foodProd, minProd, brainPow, false);
         myFarmer.introduceWorker();
         return myFarmer;

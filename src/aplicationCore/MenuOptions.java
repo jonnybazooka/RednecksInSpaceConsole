@@ -3,7 +3,7 @@ package aplicationCore;
 public enum MenuOptions {
     CHECK_WORKERS_ABILITIES,
     CHECK_RESOURCES,
-    BUILD_WONDER,
+    REPAIR_SPACESHIP,
     BUILD_A_BUILDING,
     RESOLVE_CRISIS,
     PRODUCE_RESOURCES,

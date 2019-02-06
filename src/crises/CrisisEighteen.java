@@ -1,5 +1,6 @@
 package crises;
 
+import aplicationCore.ClearScreen;
 import aplicationCore.Resources;
 import workers.Worker;
 
@@ -14,6 +15,7 @@ public class CrisisEighteen extends Crisis {
 
     @Override
     public void crisisResolution(ArrayList<Crisis> crises, ArrayList<Worker> workers, Resources resources) {
+        ClearScreen.clearConsoleScreen();
         System.out.println("The alien spaceship kidnapped one of your workers to do some tests. Don't worry, he " +
                 "will be back next turn. \nType 'kidnapper' to see who was kidnapped.");
         String button = new Scanner(System.in).nextLine();

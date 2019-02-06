@@ -1,5 +1,6 @@
 package crises;
 
+import aplicationCore.ClearScreen;
 import aplicationCore.Resources;
 import workers.Worker;
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ public class CrisisSix extends Crisis {
 
     @Override
     public void crisisResolution(ArrayList<Crisis> crises, ArrayList<Worker> workers, Resources resources) {
+        ClearScreen.clearConsoleScreen();
         System.out.println("There is an asteroid going towards your resource depot. You can send a one man mission to redirect " +
                 "the asteroid,\nbut the worker you will send won't be able to produce this turn. Pick your worker:");
         String asteroidBuster = new Scanner(System.in).nextLine();

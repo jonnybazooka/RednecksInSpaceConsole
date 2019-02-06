@@ -80,14 +80,16 @@ public class Resources {
         isResourcesProducedThisTurn = resourcesProducedThisTurn;
     }
 
-    void checkLoseConditions() {
+    void checkLoseConditions(Wonder wonder) {
         if (foodResources < 0 || mineralResources < 0 || moneyResources < 0) {
             System.out.println("YOU HAVE LOST! TRY AGAIN!");
             if (foodResources < 0) {
                 System.out.println("You starved your workers to death. You are like Stalin.");
+                System.out.println("Your spaceship repair status was: " + wonder.getWonderConstructionProgress() + "/50.");
             }
             if (moneyResources < 0) {
                 System.out.println("You don't have money to pay your workers. You are like Kim Jong Un.");
+                System.out.println("Your spaceship repair status was: " + wonder.getWonderConstructionProgress() + "/50.");
             }
             App.gameContinue = false;
         }

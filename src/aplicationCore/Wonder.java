@@ -40,10 +40,10 @@ public class Wonder {
         if (resources.getMineralResources() >= 5 && !wonderBuiltThisTurn) {
             wonderConstructionProgress = wonderConstructionProgress + (5 * wonderBuildEfficiency);
             resources.setMineralResources(resources.getMineralResources() - 5);
-            System.out.println("You are closer to victory. Your wonder progress is: " + wonderConstructionProgress + "/50");
+            System.out.println("You are closer to victory. Your repair progress is: " + wonderConstructionProgress + "/50");
             wonderBuiltThisTurn = true;
         } else if (wonderBuiltThisTurn) {
-            System.out.println("You have already built wonder this turn.");
+            System.out.println("You have already repaired your spaceship this turn.");
         } else if (resources.getMineralResources() < 5) {
             System.out.println("Not enough minerals.");
         }

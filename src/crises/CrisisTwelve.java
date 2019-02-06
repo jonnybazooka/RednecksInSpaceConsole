@@ -1,5 +1,6 @@
 package crises;
 
+import aplicationCore.ClearScreen;
 import aplicationCore.Resources;
 import workers.Worker;
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ public class CrisisTwelve extends Crisis {
 
     @Override
     public void crisisResolution(ArrayList<Crisis> crises, ArrayList<Worker> workers, Resources resources) {
+        ClearScreen.clearConsoleScreen();
         System.out.println("Your banker has became paranoid. He doesn't want to leave anymore to do outside works. But his efficiency " +
                 "as a banker will improve.\nYou just need to feed him better. Choose how many percent more food he will eat (0 - 100).");
         double greatHunger = new Scanner(System.in).nextDouble();
