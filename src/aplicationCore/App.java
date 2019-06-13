@@ -7,8 +7,6 @@ import workers.*;
 import java.util.ArrayList;
 
 public class App {
-    //TODO dodac opcje zapisu i odczytu gry
-    //TODO pozbyc sie troche if'ow
 
     private static Resources resources = null;
     static boolean gameContinue = true;
